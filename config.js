@@ -36,11 +36,11 @@ module.exports = [{
 		debug: true,
 		userName: username,
 		password: password,
-		sasl: true
+		sasl: password != null
 	}
 }]
 
 // Debug
-console.log('Starting with versions:', JSON.stringify(process.versions, null, '  '))
+// console.log('Starting with versions:', JSON.stringify(process.versions, null, '  '))
 // console.log('Starting with environment configuration:', JSON.stringify(process.env, null, '  '))
 // console.log('Starting with slackirc configuration:', JSON.stringify(module.exports, null, '  '))
