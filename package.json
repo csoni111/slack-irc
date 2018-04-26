@@ -22,7 +22,7 @@
     "url": "https://github.com/ekmartin/slack-irc/issues"
   },
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node dist/index.js --config ./config.js",
     "build": "babel lib --out-dir dist",
     "prepublish": "npm run build",
     "lint": "eslint . --ignore-path .gitignore",
