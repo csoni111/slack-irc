@@ -101,7 +101,7 @@ describe('Bot Events', function () {
   it('should not send messages to irc if it has an invalid subtype', function () {
     const message = {
       type: 'message',
-      subtype: 'bot_message'
+      subtype: 'message_replied'
     };
     this.bot.slack.rtm.emit('message', message);
     this.bot.sendToIRC.should.have.not.have.been.called;
