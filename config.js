@@ -1,6 +1,8 @@
 // Prepare
 const username = process.env.SLACKIRC_NICKNAME || 'slackirc'
 const server = process.env.SLACKIRC_SERVER || 'chat.freenode.net'
+const ircStatusNoticesJoin = process.env.IRC_STATUS_NOTICES_JOIN || false
+const ircStatusNoticesLeave = process.env.IRC_STATUS_NOTICES_LEAVE || false
 const password = process.env.SLACKIRC_PASSWORD
 const token = process.env.SLACKIRC_TOKEN
 const channels = (function () {
@@ -37,6 +39,10 @@ module.exports = [{
 		userName: username,
 		password: password,
 		sasl: password != null
+	},
+	ircStatusNotices: {
+		join: ircStatusNoticesJoin,
+		leave: ircStatusNoticesLeave
 	}
 }]
 
